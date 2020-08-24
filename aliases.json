@@ -1,0 +1,880 @@
+{
+    "status": {
+        "iteration": 5,
+        "codes": [],
+        "types": []
+    },
+    "10K_balance sheets": {
+        "cash and cash equivalents": {},
+        "prepaid expenses": {},
+        "deposits on inventory": {},
+        "inventory": {},
+        "total current assets": {},
+        "available for sale securities, at market value": {},
+        "intellectual property, net of impairment": {},
+        "fixed assets, net": {},
+        "total assets": {},
+        "accounts payable and accrued liabilities": {},
+        "accounts payable to related party": {},
+        "advances payable": {},
+        "current portion of convertible notes payable, net of discount": {},
+        "note payable": {},
+        "current portion of accrued interest payable": {},
+        "total current liabilities": {},
+        "accrued interest payable": {},
+        "total liabilities": {},
+        "common stock": {},
+        "additional paid-in capital": {},
+        "accumulated other comprehensive income": {},
+        "accumulated deficit": {},
+        "total stockholders' deficit": {},
+        "total liabilities and stockholders' deficit": {},
+        "preferred stock": {},
+        "accounts receivable, less allowance for doubtful accounts": {},
+        "inventories, net": {},
+        "derivative assets": {},
+        "prepaid assets": {},
+        "other": {},
+        "land": {},
+        "building": {},
+        "machinery and equipment": {},
+        "leasehold improvements": {},
+        "property and equipment, gross": {},
+        "less accumulated depreciation and amortization": {},
+        "total property and equipment, net": {},
+        "software development costs, less accumulated amortization": {},
+        "goodwill": {},
+        "intangible assets, net": {},
+        "deferred income taxes": {},
+        "investments and other assets, net": {},
+        "total non-current assets": {},
+        "accounts payable": {
+            "starts": [
+                "accounts payable and accrued liabilities",
+                "accounts payable to related party"
+            ]
+        },
+        "accounts payable-related parties": {
+            "starts": [
+                "accounts payable"
+            ]
+        },
+        "accrued payroll and employee benefits": {},
+        "accrued income taxes": {},
+        "accrued expenses and other": {},
+        "accrued warranty expenses": {},
+        "derivative liabilities": {},
+        "short-term debt": {},
+        "accrued tax liability": {},
+        "deferred credits and other": {},
+        "total non-current liabilities": {},
+        "retained earnings": {},
+        "total shareholders' equity": {},
+        "total liabilities and shareholders' equity": {
+            "starts": [
+                "total liabilities"
+            ]
+        },
+        "cash": {
+            "starts": [
+                "cash and cash equivalents"
+            ]
+        },
+        "notes receivable, net of allowances": {},
+        "inventory, net": {
+            "starts": [
+                "inventory"
+            ]
+        },
+        "capitalized agricultural costs": {},
+        "prepaid expenses and other current assets": {
+            "starts": [
+                "prepaid expenses"
+            ]
+        },
+        "current assets - discontinued operations": {},
+        "property and equipment, net": {
+            "ends": [
+                "total property and equipment, net"
+            ]
+        },
+        "deferred costs": {},
+        "deposits and other assets, net of reserve": {},
+        "non current assets - discontinued operations": {
+            "ends": [
+                "current assets - discontinued operations"
+            ]
+        },
+        "other accrued expenses": {},
+        "accounts payable and other accrued expenses - related parties": {
+            "starts": [
+                "accounts payable"
+            ]
+        },
+        "current liabilities - discontinued operations": {},
+        "notes payable, net of debt discount": {},
+        "related party notes payable, net of discount": {},
+        "convertible notes payable, net of discount": {
+            "ends": [
+                "current portion of convertible notes payable, net of discount"
+            ]
+        },
+        "convertible notes payable, directors": {},
+        "derivative liability": {
+            "levs": {
+                "derivative liabilities": "3-15%"
+            }
+        },
+        "warrant liability": {},
+        "notes payable, less current portion": {},
+        "website development": {},
+        "account payable": {
+            "levs": {
+                "accounts payable": "1-7%"
+            }
+        },
+        "shareholder loan": {},
+        "authorized": {},
+        "additional paid in capital": {
+            "levs": {
+                "additional paid-in capital": "1-4%"
+            }
+        },
+        "stock subscription receivable": {},
+        "deficit accumulated during the development stage": {},
+        "total stockholders' equity": {
+            "levs": {
+                "total stockholders' deficit": "5-19%",
+                "total shareholders' equity": "4-15%"
+            }
+        },
+        "total liabilities and stockholders' equity": {
+            "starts": [
+                "total liabilities"
+            ],
+            "levs": {
+                "total liabilities and stockholders' deficit": "5-12%",
+                "total liabilities and shareholders' equity": "4-10%"
+            }
+        },
+        "prepayment": {},
+        "interest payable - related party": {},
+        "income taxes payable": {},
+        "amount due to a related party": {},
+        "note payable - related party - current": {
+            "starts": [
+                "note payable"
+            ]
+        },
+        "notes payable -- related party": {},
+        "total long-term liabilities": {},
+        "common stock no par value, 100,000,000 shares authorized, 5,251,309 shares issued and outstanding": {
+            "starts": [
+                "common stock"
+            ]
+        },
+        "other reserve": {}
+    },
+    "10K_statements of cash flows": {
+        "net income": {},
+        "stock compensation": {},
+        "depreciation": {},
+        "amortization of discount on convertible note payable": {},
+        "loss on conversion of convertible notes payable": {},
+        "loss on conversion of preferred stock": {},
+        "prepaid expenses": {},
+        "deposits on inventory": {},
+        "inventory": {},
+        "accounts payable and accrued liabilities": {},
+        "accounts payable and accrued liabilities to related party": {},
+        "accrued interest payable": {},
+        "net cash used in operating activities": {},
+        "cash used to acquire fixed assets": {},
+        "net cash used in investing activities": {},
+        "proceeds from advances": {},
+        "proceeds from convertible notes payable": {},
+        "proceeds from sale of common stock": {},
+        "proceeds from sale of series b preferred stock": {},
+        "net cash provided by financing activities": {},
+        "net increase in cash": {},
+        "cash at beginning of period": {},
+        "cash at end of period": {},
+        "interest": {},
+        "taxes": {},
+        "common stock issued for conversion of convertible note payable": {},
+        "preferred stock issued for debt conversion": {},
+        "common stock issued for conversion of series b preferred stock": {},
+        "change in fair value of available-for-sale securities": {},
+        "beneficial conversion discount on convertible note payable": {},
+        "provision for doubtful accounts": {},
+        "deferred income taxes": {
+            "ends": [
+                "taxes"
+            ]
+        },
+        "equity in income of affiliates": {},
+        "foreign currency loss": {},
+        "unrealized loss on derivatives": {},
+        "depreciation and amortization": {
+            "starts": [
+                "depreciation"
+            ]
+        },
+        "stock-based compensation": {},
+        "decrease in accounts receivable": {},
+        "decrease in inventories": {},
+        "decrease in prepaid expenses": {
+            "ends": [
+                "prepaid expenses"
+            ]
+        },
+        "increase in accounts payable": {},
+        "increase in accrued expenses": {},
+        "increase in accrued tax liability": {},
+        "net change in derivative assets and liabilities": {},
+        "other": {},
+        "net cash provided by operating activities": {
+            "levs": {
+                "net cash used in operating activities": "8-20%"
+            }
+        },
+        "proceeds from sale of property and equipment": {},
+        "purchase of property and equipment": {},
+        "software development costs": {},
+        "other investments": {},
+        "acquisition of business": {},
+        "net cash provided by investing activities": {
+            "levs": {
+                "net cash used in investing activities": "8-20%"
+            }
+        },
+        "proceeds from exercise of common stock options": {},
+        "dividends paid": {},
+        "taxes paid related to net settlement of restricted shares": {
+            "starts": [
+                "taxes"
+            ]
+        },
+        "effect of exchange rate changes on cash and cash equivalents": {},
+        "net increase in cash and cash equivalents": {
+            "starts": [
+                "net increase in cash"
+            ]
+        },
+        "cash and cash equivalents at beginning of year": {},
+        "cash and cash equivalents at end of year": {},
+        "income taxes, net": {},
+        "provisions and allowances": {},
+        "gain on debt forgiveness": {},
+        "charges from escrow deposits": {},
+        "inventory valuation reserve": {
+            "starts": [
+                "inventory"
+            ]
+        },
+        "change in fair value of derivative liability": {},
+        "change in fair value of warrant liability": {},
+        "amortization of debt discount": {},
+        "financing costs": {},
+        "gain on extinguishment of debt": {},
+        "stock based compensation": {
+            "levs": {
+                "stock-based compensation": "1-4%"
+            }
+        },
+        "impairment of goodwill": {},
+        "deferred tax liability": {},
+        "impairment of intangible assets": {},
+        "accounts receivable": {
+            "ends": [
+                "decrease in accounts receivable"
+            ]
+        },
+        "capitalized agricultural costs": {},
+        "deposits in escrow": {},
+        "prepaid insurance": {},
+        "prepaid expenses and other current assets": {
+            "starts": [
+                "prepaid expenses"
+            ]
+        },
+        "advances for machinery": {},
+        "deferred costs": {},
+        "accounts payable and other accrued expenses": {},
+        "other accrued expenses": {},
+        "accrued expenses directors": {},
+        "customer deposits": {},
+        "changes related to discontinued operations": {},
+        "issuance of note receivable": {},
+        "repayment of note receivable": {},
+        "purchase of real estate": {},
+        "proceeds received for sale of rights and assets": {},
+        "construction in progress": {},
+        "net cash provided by by investing activities": {
+            "levs": {
+                "net cash provided by investing activities": "3-7%"
+            }
+        },
+        "proceeds from issuance of notes payable": {},
+        "payments on notes payable": {},
+        "payments on related party notes payable": {},
+        "exercise of employee stock options": {},
+        "proceeds from issuance of convertible notes payable, net of fees": {},
+        "proceeds from issuance of convertible notes payable from directors, net": {},
+        "cash, beginning of year": {},
+        "cash, end of year": {},
+        "cash paid for interest": {
+            "ends": [
+                "interest"
+            ]
+        },
+        "common stock issued upon debt conversion": {},
+        "common stock issued to consultants": {},
+        "account payable assigned to note payable - related party": {},
+        "account payable assigned to convertible note payable - related party": {
+            "levs": {
+                "account payable assigned to note payable - related party": "12-18%"
+            }
+        },
+        "account payable assigned to convertible notes payable": {},
+        "advances on machinery paid directly by lender": {},
+        "exchange of notes payable and accrued interest to convertible notes": {},
+        "exchange of convertible notes payable and accrued interest to convertible notes": {
+            "levs": {
+                "exchange of notes payable and accrued interest to convertible notes": "12-15%"
+            }
+        },
+        "oid - notes payable": {},
+        "oid - convertible notes payable": {},
+        "convertible notes payable assigned to notes payable": {},
+        "cancellation of notes payable for land": {},
+        "debt discount additions for convertible debt": {},
+        "exchange of notes payable to related party to convertible notes payable related party": {},
+        "investor contribution": {},
+        "unrealized gain on marketable securities": {},
+        "purchase of land with notes payable": {},
+        "issuance of warrants in connection with convertible debentures": {},
+        "issuance of warrants in connection with farming agreement": {},
+        "amortization": {
+            "starts": [
+                "amortization of discount on convertible note payable",
+                "amortization of debt discount"
+            ],
+            "ends": [
+                "depreciation and amortization"
+            ]
+        },
+        "account payable": {
+            "starts": [
+                "account payable assigned to note payable - related party",
+                "account payable assigned to convertible note payable - related party",
+                "account payable assigned to convertible notes payable"
+            ]
+        },
+        "website development": {},
+        "net cash provided investing activities": {
+            "levs": {
+                "net cash provided by investing activities": "3-8%",
+                "net cash provided by by investing activities": "6-16%"
+            }
+        },
+        "issuance of common stock": {},
+        "stock subscription receivable": {},
+        "net increase change in cash": {},
+        "cash and cash equivalents balance, beginning of period": {},
+        "cash and cash equivalents balance, end of period": {},
+        "interest expense to a related party": {
+            "starts": [
+                "interest"
+            ]
+        },
+        "adjustments to reconcile net income to net cash used in operating activities": {
+            "ends": [
+                "net cash used in operating activities"
+            ]
+        },
+        "decrease in prepayment": {},
+        "increase in interest payable": {},
+        "increase in amount due to a related party": {},
+        "cash flows from investing activities": {},
+        "increase in notes payable - related party": {},
+        "net cash provided by financing activites": {
+            "levs": {
+                "net cash provided by financing activities": "1-2%"
+            }
+        },
+        "interest paid": {
+            "starts": [
+                "interest"
+            ]
+        },
+        "taxes paid": {
+            "starts": [
+                "taxes",
+                "taxes paid related to net settlement of restricted shares"
+            ]
+        }
+    },
+    "10K_statements of operations and comprehensive income (loss)": {
+        "revenue": {},
+        "cost of goods sold": {},
+        "": {},
+        "general and administrative expenses": {},
+        "total operating expenses": {},
+        "loss from operations": {},
+        "other income": {},
+        "loss on conversion of preferred stock": {},
+        "loss on conversion of debt": {},
+        "interest expense": {},
+        "net income": {},
+        "net income per common share - basic and diluted": {},
+        "weighted average shares outstanding": {},
+        "translation gain of foreign currency financial statements": {},
+        "loss on derivative instruments reclassified into operations, net of tax": {},
+        "gain on derivative instruments, net of tax": {},
+        "total other comprehensive income": {},
+        "comprehensive income": {},
+        "service revenue": {
+            "ends": [
+                "revenue"
+            ]
+        },
+        "cost of revenues": {},
+        "general and administrative": {
+            "starts": [
+                "general and administrative expenses"
+            ]
+        },
+        "interest expense, net": {
+            "starts": [
+                "interest expense"
+            ]
+        },
+        "change in fair value of derivative liabilities": {},
+        "change in fair value of warrant liability": {},
+        "gain on sale of interest in subsidiary": {},
+        "loss on sale of rights and assets": {},
+        "gain on debt forgiveness": {},
+        "gain on extinguishment of debt": {},
+        "other expenses": {},
+        "total other income": {},
+        "loss from continuing operations": {},
+        "income from discontinued operations, net of taxes": {},
+        "income before provision for taxes": {},
+        "basic and diluted income per share - continuing operations": {},
+        "basic and diluted income per share from discontinued operations": {},
+        "basic and diluted income per share": {
+            "starts": [
+                "basic and diluted income per share - continuing operations",
+                "basic and diluted income per share from discontinued operations"
+            ]
+        },
+        "basic and diluted": {
+            "starts": [
+                "basic and diluted income per share - continuing operations",
+                "basic and diluted income per share from discontinued operations",
+                "basic and diluted income per share"
+            ],
+            "ends": [
+                "net income per common share - basic and diluted"
+            ]
+        },
+        "realized loss on discontinued operations": {},
+        "unrealized loss on discontinued operations": {
+            "ends": [
+                "realized loss on discontinued operations"
+            ]
+        },
+        "comprehensive loss": {},
+        "amortization": {},
+        "professional fees": {},
+        "business license": {},
+        "bank charges and interest": {},
+        "total general and administrative expenses": {
+            "ends": [
+                "general and administrative expenses"
+            ]
+        },
+        "basic and diluted net income per common share": {
+            "starts": [
+                "basic and diluted"
+            ]
+        },
+        "weighted average common shares outstanding - basic and diluted": {
+            "ends": [
+                "basic and diluted"
+            ]
+        },
+        "income": {},
+        "cost of sales": {},
+        "gross profit": {},
+        "operating loss": {},
+        "interest expense to a related party": {
+            "starts": [
+                "interest expense"
+            ]
+        },
+        "loss before income taxes": {},
+        "provision for income taxes": {},
+        "net income per common share basic and diluted": {
+            "starts": [
+                "net income"
+            ],
+            "ends": [
+                "basic and diluted"
+            ],
+            "levs": {
+                "net income per common share - basic and diluted": "2-4%"
+            }
+        },
+        "weighted average number of common shares outstanding basic and diluted": {
+            "ends": [
+                "basic and diluted"
+            ],
+            "levs": {
+                "weighted average common shares outstanding - basic and diluted": "12-17%"
+            }
+        }
+    },
+    "10K_statements of stockholder's (deficit) equity": {
+        "balance": {},
+        "stock compensation": {},
+        "series b preferred stock issue for cash": {},
+        "common stock issued for conversion of convertible notes": {},
+        "common stock issued for services": {},
+        "discount on convertible note payable": {},
+        "other comprehensive income": {},
+        "net income": {},
+        "common stock issued for conversion of preferred stock": {},
+        "loss on conversion of debt": {},
+        "balances, beginning": {
+            "starts": [
+                "balance"
+            ]
+        },
+        "stock-based compensation expense": {},
+        "tax benefit from stock option activities": {},
+        "dividends paid": {},
+        "balances, ending": {
+            "starts": [
+                "balance"
+            ]
+        },
+        "exercise of common stock options": {},
+        "sale of common stock": {},
+        "stock-based compensation and bonuses": {},
+        "exercise of warrants": {},
+        "issuance of shares to settle accounts payable": {},
+        "conversions of convertible notes payable": {},
+        "issuance of warrants in connection with convertible notes payable": {},
+        "reclassification of warrant liability out of equity": {},
+        "exercise of warrants in connection with convertible notes payable": {
+            "starts": [
+                "exercise of warrants"
+            ],
+            "levs": {
+                "issuance of warrants in connection with convertible notes payable": "7-11%"
+            }
+        },
+        "warrants issued in connection with farming agreement": {},
+        "share cancelation": {},
+        "conversion of preferred stock series a into common stock": {},
+        "unrealized loss from marketable securities": {},
+        "net income income": {
+            "starts": [
+                "net income"
+            ]
+        },
+        "realized loss from marketable securities": {
+            "ends": [
+                "unrealized loss from marketable securities"
+            ]
+        },
+        "investor contribution": {},
+        "issuance of shares to consultants": {},
+        "subscription receivable": {},
+        "issuance of common shares for cash at $0.01 per share for the year ended october 31": {},
+        "net income for the year ended october 31": {
+            "starts": [
+                "net income"
+            ]
+        },
+        "shares, outstanding, beginning balance": {
+            "ends": [
+                "balance"
+            ]
+        },
+        "stockholders' equity, including portion attributable to noncontrolling interest, beginning balance": {
+            "ends": [
+                "balance"
+            ]
+        },
+        "shares, outstanding, ending balance": {
+            "ends": [
+                "balance"
+            ]
+        },
+        "stockholders' equity, including portion attributable to noncontrolling interest, ending balance": {
+            "ends": [
+                "balance"
+            ]
+        },
+        "other reserve": {}
+    },
+    "10Q_balance sheets": {
+        "cash and cash equivalents": {},
+        "prepaid expenses": {},
+        "inventory": {},
+        "total current assets": {},
+        "plant, property, and equipment, net of accumulated depreciation": {},
+        "available for sale securities, at market value": {},
+        "total assets": {},
+        "accounts payable and accrued liabilities": {},
+        "accounts payable to related party": {},
+        "advances payable": {},
+        "current portion of convertible notes payable, net of discount": {},
+        "note payable, default": {},
+        "current portion of accrued interest payable": {},
+        "total current liabilities": {},
+        "total liabilities": {},
+        "common stock": {},
+        "additional paid-in capital": {},
+        "accumulated other comprehensive income": {},
+        "accumulated deficit": {},
+        "total stockholders' deficit": {},
+        "total liabilities and stockholders' deficit": {},
+        "preferred stock": {},
+        "net income": {},
+        "provision for doubtful accounts": {},
+        "deferred income taxes": {},
+        "equity in income of affiliates": {},
+        "depreciation and amortization": {},
+        "foreign currency loss": {},
+        "unrealized loss on derivatives": {},
+        "stock-based compensation": {},
+        "decrease in accounts receivable": {},
+        "decrease in inventories": {},
+        "decrease in prepaid expenses": {
+            "ends": [
+                "prepaid expenses"
+            ]
+        },
+        "increase in accounts payable": {},
+        "increase in accrued expenses": {},
+        "net change in derivative assets and liabilities": {},
+        "other": {},
+        "net cash provided by operating activities": {},
+        "purchase of property and equipment": {},
+        "proceeds from sale of equipment": {},
+        "software development costs": {},
+        "net cash provided by investing activities": {},
+        "dividends paid": {},
+        "taxes paid related to net settlement of restricted shares": {},
+        "proceeds from exercise of common stock options": {},
+        "repayment of short-term debt": {},
+        "net cash provided by financing activities": {},
+        "effect of exchange rate changes on cash": {},
+        "net increase in cash and cash equivalents": {
+            "ends": [
+                "cash and cash equivalents"
+            ]
+        },
+        "cash and cash equivalents at beginning of period": {
+            "starts": [
+                "cash and cash equivalents"
+            ]
+        },
+        "cash and cash equivalents at end of period": {
+            "starts": [
+                "cash and cash equivalents"
+            ]
+        },
+        "website development": {},
+        "accounts payable": {
+            "starts": [
+                "accounts payable and accrued liabilities",
+                "accounts payable to related party"
+            ],
+            "ends": [
+                "increase in accounts payable"
+            ]
+        },
+        "loan from officer": {},
+        "common stock, par value $0.001; 500,000,000 shares authorized, 6,260,000 shares issued and outstanding": {
+            "starts": [
+                "common stock"
+            ]
+        },
+        "additional paid in capital": {
+            "levs": {
+                "additional paid-in capital": "1-4%"
+            }
+        },
+        "deficit accumulated during the development stage": {},
+        "total stockholders' equity": {
+            "levs": {
+                "total stockholders' deficit": "5-19%"
+            }
+        },
+        "total liabilities and stockholders' equity": {
+            "starts": [
+                "total liabilities"
+            ],
+            "levs": {
+                "total liabilities and stockholders' deficit": "5-12%"
+            }
+        },
+        "cash": {
+            "starts": [
+                "cash and cash equivalents",
+                "cash and cash equivalents at beginning of period",
+                "cash and cash equivalents at end of period"
+            ],
+            "ends": [
+                "effect of exchange rate changes on cash"
+            ]
+        },
+        "prepayment": {},
+        "interest payable - related party": {},
+        "income taxes payable": {},
+        "amount due to a related party": {},
+        "note payable - related party - current": {},
+        "common stock no par value, 100,000,000 shares authorized, 5,251,309 shares issued and outstanding": {
+            "starts": [
+                "common stock"
+            ]
+        },
+        "other reserve": {},
+        "accrued expenses": {
+            "ends": [
+                "increase in accrued expenses"
+            ]
+        },
+        "common stock $0.0001 par value, 100,000,000 shares authorized, 5,252,309 shares issued and outstanding": {
+            "starts": [
+                "common stock"
+            ]
+        },
+        "other assets": {},
+        "accrued interest, related party": {},
+        "accrued salary, related party": {},
+        "loan from shareholder, related party": {},
+        "stock payable": {},
+        "total stockholders\u00e2\u20ac\u2122 equity": {
+            "levs": {
+                "total stockholders' equity": "3-11%"
+            }
+        },
+        "total liabilities and stockholders\u00e2\u20ac\u2122 equity": {
+            "starts": [
+                "total liabilities"
+            ],
+            "levs": {
+                "total liabilities and stockholders' deficit": "8-18%",
+                "total liabilities and stockholders' equity": "3-7%"
+            }
+        }
+    },
+    "10Q_statements of cash flows": {
+        "net income": {},
+        "depreciation": {},
+        "amortization of discount on convertible note payable": {},
+        "loss on conversion of preferred stock": {},
+        "loss on conversion of debt": {},
+        "non-cash compensation": {},
+        "inventory": {},
+        "prepaid expenses": {},
+        "accounts payable and accrued liabilities": {},
+        "accounts payable to related party": {},
+        "accrued interest payable": {},
+        "net cash used in operating activities": {},
+        "net cash used in investing activities": {},
+        "proceeds from convertible notes payable": {},
+        "net cash provided by financing activities": {},
+        "net increase in cash": {},
+        "cash at beginning of period": {},
+        "cash at end of period": {},
+        "interest": {},
+        "taxes": {},
+        "conversion of convertible notes payable into common stock": {},
+        "change in fair value of available-for-sale securities": {},
+        "preferred stock issued for debt conversion": {},
+        "discount issued on convertible debt": {},
+        "stock-based compensation": {},
+        "proceeds from convertible notes payable, net": {
+            "starts": [
+                "proceeds from convertible notes payable"
+            ]
+        },
+        "discount on convertible debt": {},
+        "shares, outstanding, beginning balance": {},
+        "stockholders' equity, including portion attributable to noncontrolling interest, beginning balance": {},
+        "shares, outstanding, ending balance": {},
+        "stockholders' equity, including portion attributable to noncontrolling interest, ending balance": {},
+        "merger transaction": {},
+        "shares, outstanding": {
+            "starts": [
+                "shares, outstanding, beginning balance",
+                "shares, outstanding, ending balance"
+            ]
+        },
+        "stockholders' equity, including portion attributable to noncontrolling interest": {
+            "starts": [
+                "stockholders' equity, including portion attributable to noncontrolling interest, beginning balance",
+                "stockholders' equity, including portion attributable to noncontrolling interest, ending balance"
+            ],
+            "ends": [
+                "interest"
+            ]
+        }
+    },
+    "10Q_statements of operations and comprehensive income (loss)": {
+        "revenue": {},
+        "cost of goods sold": {},
+        "gross profit": {},
+        "general and administrative expenses": {},
+        "total operating expenses": {},
+        "loss from operations": {},
+        "loss on conversion of preferred stock": {},
+        "loss on conversion of debt": {},
+        "interest expense": {},
+        "net income": {},
+        "net income per common share - basic and diluted": {},
+        "weighted average shares outstanding": {},
+        "oil lease income": {},
+        "income": {},
+        "cost of sales": {},
+        "general and administrative": {
+            "starts": [
+                "general and administrative expenses"
+            ]
+        },
+        "operating loss": {},
+        "interest expense to a related party": {
+            "starts": [
+                "interest expense"
+            ]
+        },
+        "loss before income taxes": {},
+        "provision for income taxes": {},
+        "net income per common share basic and diluted": {
+            "starts": [
+                "net income"
+            ],
+            "levs": {
+                "net income per common share - basic and diluted": "2-4%"
+            }
+        },
+        "weighted average number of common shares outstanding basic and diluted": {}
+    },
+    "10Q_statements of stockholder's (deficit) equity": {
+        "balance": {},
+        "common stock issued for conversion of preferred stock": {},
+        "discount on convertible note payable": {},
+        "loss on conversion of debt": {},
+        "other comprehensive income": {},
+        "net income": {},
+        "common stock issued for conversion of convertible notes": {},
+        "common stock issued to officer as compensation": {}
+    }
+}
