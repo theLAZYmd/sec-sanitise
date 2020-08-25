@@ -9,7 +9,7 @@
 			"type": "python",
 			"request": "launch",
 			"console": "integratedTerminal",
-			"program": "${workspaceFolder}/index.py",
+			"program": "${file}",
 			"args": ["--test"]
 		}
 	]

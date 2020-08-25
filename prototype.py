@@ -25,36 +25,23 @@ def transform_data(value: str) -> Union[int, float, str]:
 	except:
 		return value
 
-antonyms = [
-	['beginning', 'end'],
-	['derivative', 'warrant'],
-	['financing', 'operating', 'investing'],
-	['continuing', 'discontinued'],
-	['net', 'gross'],
-	['deficit', 'equity'],
-	['assets', 'liabilities']
-]
-
-def is_antonym(a: str, b: str) -> bool:
-	for pair in antonyms:
-		res = [
-			find_index(pair, a),
-			find_index(pair, b)
-		]
-		if res[0] >= 0 and res[1] >= 0 and res[0] != res[1]:
-			return True
-
-	res = [
-		re.search(regexes['negative'], a),
-		re.search(regexes['negative'], b)
-	]
-	if len(list(filter(None, res))) == 1:
-		return True
-
-	return False
-
-def find_index(substrings: List[str], s: str) -> int:
-	for i, sub in enumerate(substrings):
-		if sub in s:
-			return i
-	return -1
+def sanitise(key: str) -> str:
+	key = key.lower().strip()
+	key = re.sub(regexes['brackets'], '', key)
+	key = re.sub(regexes['spaces'], ' ', key)
+	key = re.sub(regexes['date_spec'], '', key)
+	key = re.split(regexes['currency_spec'], key)[0]
+	key = key.replace(', shares', '')
+	key = key.replace('\u00e2\u20ac\u201c', '-')
+	key = key.replace('\u2019', '\'')
+	if ':' in key:
+		key = key.split(':')[0]
+	if key.endswith('respectively'):
+		key = key.split(',')[0]		
+	if key.endswith('par value'):
+		key = key.split(',')[0:-1].join(',')
+	if re.search(regexes['year'], key):
+		key = key.split(',')[0]
+	if re.search(regexes['loss'], key):
+		key = key.replace('loss', 'income')
+	return key.strip()

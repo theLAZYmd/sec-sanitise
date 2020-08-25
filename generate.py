@@ -6,13 +6,18 @@ import json
 
 import pandas as pd
 import re
-
 # pylint: disable=no-member,no-name-in-module
 from Levenshtein import distance
-from regexes import regexes
-from prototype import validate_dates
-from comparisons import is_antonym, common_terms
+from typing import List, Union
 
+from regexes import regexes
+from prototype import sanitise, validate_dates
+from comparisons import get_attribs, is_antonym, common_terms, valid_startswith, valid_endswith
+
+use_attribs = False
+begin_from_iteration = 0
+max_iterations = None
+sourceDir = 'U:\\Day Files\\Rodman, Ben\\EAS\\Quant\\CompanyData\\'
 sec_codes = ['10K', '10Q']
 sec_types = [
 	'balance sheets',
@@ -21,27 +26,7 @@ sec_types = [
 	'statements of stockholder\'s (deficit) equity'
 ]
 
-def sanitise(key):
-	key = key.lower().strip()
-	key = re.sub(regexes['brackets'], '', key)
-	key = re.sub(regexes['spaces'], ' ', key)
-	key = re.sub(regexes['date_spec'], '', key)
-	key = re.split(regexes['currency_spec'], key)[0]
-	key = key.replace(', shares', '')
-	key = key.replace('\u00e2\u20ac\u201c', '-')
-	if ':' in key:
-		key = key.split(':')[0]
-	if key.endswith('respectively'):
-		key = key.split(',')[0]		
-	if key.endswith('par value'):
-		key = key.split(',')[0:-1].join(',')
-	if re.search(regexes['year'], key):
-		key = key.split(',')[0]
-	if re.search(regexes['loss'], key):
-		key = key.replace('loss', 'income')
-	return key.strip()
-
-def generate(sourceDir, extension='.csv'):
+def generate(sourceDir: str, extension='.csv') -> None:
 
 	output = {}
 	missed_codes = []
@@ -49,13 +34,15 @@ def generate(sourceDir, extension='.csv'):
 
 	folders = os.listdir(sourceDir)
 	for z, folder in enumerate(folders):
+		if z < begin_from_iteration:
+			continue
 		output['status'] = {
 			'iteration': z
 		}
 		
 		if '.' in folder:
 			continue
-		files = os.listdir('\\'.join([sourceDir, folder]))
+		files = os.listdir(os.path.join(sourceDir, folder))
 		for f in files:
 			if not folder.endswith(extension):
 				continue
@@ -68,7 +55,7 @@ def generate(sourceDir, extension='.csv'):
 				if sec_type not in sec_types and name not in missed_types:
 					missed_types.append(sec_type)
 
-				csvfile = open('\\'.join([sourceDir, folder, f]))
+				csvfile = open(os.path.join(sourceDir, folder, f))
 				data = csv.reader(csvfile)
 				dates = None
 				body = []
@@ -101,41 +88,47 @@ def generate(sourceDir, extension='.csv'):
 						continue
 					if len(pre_mutation):
 						if not key in output[name]:
-							starts = []
-							ends = []
+							starts = {}
+							ends = {}
 							levs = {}
+							obj = get_attribs(row[1:]) if use_attribs else {}
 							for k in list(output[name].keys()):
 								if k.startswith('_') or not k or 'other' in k:
 									continue
-								if key.startswith(k) or k.startswith(key) and not k in common_terms and not key in common_terms:
-									starts.append(k)
-								elif key.endswith(k) or k.endswith(key) and not k in common_terms and not key in common_terms:
-									ends.append(k)
+								if valid_startswith(key, k):
+									starts[k] = output[name][k]
+								elif valid_endswith(key, k):
+									ends[k] = output[name][k]
 								else:
 									if not is_antonym(k, key):
 										chars = distance(k, key)
 										percent = chars / len(key)
-										if chars < 3 or percent < 0.2:
-											levs[k] = '{}-{:.0%}'.format(chars, percent)
-											if not 'aliases' in output[name][k]:
-												output[name][k]['aliases'] = []
-											output[name][k]['aliases'].append(key)
-							obj = {}
+										if len(k) > 4 and len(key) > 4:
+											if chars < 3 or percent < 0.2:
+												levs[k] = '{}-{:.0%}'.format(chars, percent)
+							aliases = {}
 							if len(starts):
-								obj['starts'] = starts
+								aliases['starts'] = starts
 							if len(ends):
-								obj['ends'] = ends
+								aliases['ends'] = ends
 							if len(levs):
-								obj['levs'] = levs
+								aliases['levs'] = levs
+							if len(aliases):
+								for crit in aliases:
+									for k in aliases[crit]:
+										if not 'aliases' in output[name][k]:
+											output[name][k]['aliases'] = []
+										output[name][k]['aliases'].append(key)
+							# obj.update(aliases)
 							output[name][key] = obj
 						else:						
 							pass
 					else:
-						output[name][key] = {}
+						output[name][key] = get_attribs(row[1:]) if use_attribs else {}
 			except:
 				traceback.print_exc()
 		print('Completed: {}/{} companies.'.format(z + 1, len(folders)))
-		if z > 5:
+		if max_iterations and z >= max_iterations:
 			break
 
 		with open('./aliases.json', 'w', encoding='utf-8') as writeFile:
@@ -145,8 +138,7 @@ def generate(sourceDir, extension='.csv'):
 			})
 			writeFile.write(json.dumps(output, indent=4))
 
-isTest = False
-sourceDir = 'U:\\Day Files\\Rodman, Ben\\EAS\\Quant\\CompanyData\\'
+isTest = True
 if isTest:
 	sourceDir = './Samples'
 
