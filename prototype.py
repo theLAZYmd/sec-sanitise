@@ -45,3 +45,12 @@ def sanitise(key: str) -> str:
 	if re.search(regexes['loss'], key):
 		key = key.replace('loss', 'income')
 	return key.strip()
+
+def validate_key(key: str, meta) -> bool:
+	key = sanitise(key)
+	if meta['k'] == key:
+		return True
+	if 'aliases' in meta:
+		if key.lower() in meta['aliases']:
+			return True
+	return False
